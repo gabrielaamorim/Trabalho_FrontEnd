@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,14 @@
     <link rel="stylesheet" href="./assets/css/drawPage.css" />
     <title>New Project</title>
 </head>
+
 <body>
-    <div>
-        <input type="color" id="cor" name="cor" value="#e66465" />
-        <label for="cor">Selecionar cor</label>
-        <button type="button" onclick="mostraGrid()">Mostrar grid</button>
-      </div>
-    <div class="areaTrabalho"></div>
+    <div id="areaPixelArt">
+        <div id="menu-drawPage">
+            <input type="color" id="cor" name="cor"/>
+            <button type="button" id="gridButton" onclick="mostraGrid()">Mostrar grid</button>
+        </div>
+        <div class="areaTrabalho"></div>
+    </div>
 </body>
 </html>

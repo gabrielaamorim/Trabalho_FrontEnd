@@ -1,3 +1,8 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 .areaTrabalho {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
@@ -11,3 +16,41 @@
     aspect-ratio: 1;
 }
 
+#areaPixelArt {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+}
+
+#gridButton {
+    background-color: rgb(40, 13, 46);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+    transition: background 1s;
+}
+
+#gridButton:hover {
+    background-color: rgb(231, 89, 89);
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+    border-radius: 50%;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+    border-radius: 50%;
+}

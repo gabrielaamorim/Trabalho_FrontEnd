@@ -20,7 +20,7 @@ html {
   }
   
 /*Menu*/
-  #menu-horizontal {
+#menu-horizontal {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
