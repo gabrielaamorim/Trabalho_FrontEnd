@@ -1,18 +1,28 @@
+/*
+INTEGRANTES:
+Brenda Gobira Valença - 2020025038
+Gabriela Emanuele de Araújo Amorim - 2020011260
+*/ 
+
 var tam = 225;
 var isShowingBorder = true;
-var color = "rgb(0, 0, 0)";
+var color = "rgb(255, 255, 255)";
 var quadro = document.querySelector(".areaTrabalho");
 var conteinerCoresPreSelecionadas = document.getElementById("coresPreSelecionadas");
+
+//Criação da área do pixel art
 for (let i = 0; i < tam; i++) {
     let item = document.createElement("div");
     quadro.appendChild(item);
 }
 
+//Seleção de cor por meio do input de cor
 var seletorDeCor = document.getElementById("inputCor");
 seletorDeCor.addEventListener('change', (ev) => {
     color = hexToRgb(ev.target.value);
 });
 
+//Lógica para as opções de cores pré selecionadas
 var coresPreSelecionadas =  conteinerCoresPreSelecionadas.children;
 var corAtualSelecionada = null;
 for(let item of coresPreSelecionadas) {
@@ -26,6 +36,7 @@ for(let item of coresPreSelecionadas) {
     });
 }
 
+//Lógica para pintura dos quadros 
 var quadrantes = quadro.children;
 var backgroundColor = "rgb(241, 236, 236)";
 for (let item of quadrantes) {
@@ -41,12 +52,14 @@ for (let item of quadrantes) {
     })
 }
 
-//https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+// Função para converter código hex em rbg 
+// Fonte: https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
 function hexToRgb(hex) {
     var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result ? `rgb(${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)})` : null;
 }
 
+//Lógica para mostrar ou esconder o grid
 function mostraGrid() {
     for (let item of quadrantes) {
         if (isShowingBorder) {
