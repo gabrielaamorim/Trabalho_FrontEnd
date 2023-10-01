@@ -1,24 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 /*Rolar para a sessão*/
 html {
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'VT323', monospace;
 }
 
 /*Responsividade com a tela cheia (imagem sólida)*/
 @media only screen and (max-width: 480px) {
-    .imgInicial{
+    .imgInicial {
         width: 100%;
         height: 60vh;
         display: flex;
         align-items: center;
-        justify-content:space-around;
+        justify-content: space-around;
     }
-  }
-  
+}
+
 /*Menu*/
 #menu-horizontal {
     display: flex;
@@ -27,33 +31,39 @@ html {
     position: fixed;
     width: 100vw;
     background-color: rgb(40, 13, 46);
-    }
+}
 
 #menu-horizontal ul {
-    list-style: none; /*tira os marcadores*/
+    list-style: none;
+    /*tira os marcadores*/
     padding: 0;
     background-color: rgb(39, 11, 53);
-    text-align:right; /*alinhar os elementos*/
-   
+    text-align: right;
+    /*alinhar os elementos*/
+
 }
 
 #menu-horizontal ul li {
-    display: inline-block; /*ficar em uma linha (e não colunas)*/
-    }
+    display: inline-block;
+    /*ficar em uma linha (e não colunas)*/
+}
 
 #menu-horizontal ul li a {
     font-family: 'VT323', monospace;
     font-size: 25;
     color: rgb(255, 255, 255);
-    text-decoration: none; /*tira o sublinhado*/
+    text-decoration: none;
+    /*tira o sublinhado*/
     padding: 22px;
-    display: inline-block; /*cria um bloco com o padding informado*/
-    transition: background 1s; /*efeito de fade combinado com o hover*/
-    }
+    display: inline-block;
+    /*cria um bloco com o padding informado*/
+    transition: background 1s;
+    /*efeito de fade combinado com o hover*/
+}
 
 #menu-horizontal ul li a:hover {
     background-color: rgb(231, 89, 89);
-    opacity: 0.5; 
+    opacity: 0.5;
 }
 
 /*Login*/
@@ -61,6 +71,7 @@ html {
 h1 {
     color: rgb(255, 255, 255);
 }
+
 body {
     margin: 0;
     font-family: 'VT323', monospace;
@@ -85,7 +96,7 @@ body * {
         width: 90%;
     }
 
-    .menu{
+    .menu {
         flex-direction: column;
     }
 
@@ -131,7 +142,7 @@ body * {
     flex-direction: column;
 }
 
-.ladoEsquerdoimg{
+.ladoEsquerdoimg {
     width: 35vw;
 }
 
@@ -148,18 +159,18 @@ body * {
     color: #f0ffffde;
     margin-bottom: 10px;
 }
-    
+
 .preenchimento input::placeholder {
     color: #f0ffff94;
 }
 
 .preenchimento {
-    width: 100%; 
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin: 10px 0px; 
+    margin: 10px 0px;
 }
 
 .preenchimento input {
@@ -170,7 +181,8 @@ body * {
     background: #574869;
     color: #f0ffffde;
     font-size: 12pt;
-    box-shadow: 0px 10px 40px #00000056; /*Sombra*/
+    box-shadow: 0px 10px 40px #00000056;
+    /*Sombra*/
     outline: none;
     box-sizing: border-box;
 }
@@ -190,4 +202,3 @@ body * {
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #bd414152;
 }
-

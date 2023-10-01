@@ -3,73 +3,102 @@
     padding: 0px;
 }
 
+body {
+    background-image: url('../img/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.efeitoSombra {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .areaTrabalho {
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
+    padding: 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    grid-template-columns: repeat(15, 1fr);
     max-width: 700px;
-    max-height: 80vh;
     width: 70%;
 }
 
-.areaTrabalho div{
+.areaTrabalho div {
     border: 1px solid white;
-    background-color: rgb(241, 236, 236);
+    background-color: rgba(241, 236, 236, 0.9);
     aspect-ratio: 1;
 }
 
-#areaPixelArt {
+.linha {
     display: flex;
-    flex-flow: row wrap;
-    align-content: center;
+    align-items: center;
     justify-content: space-evenly;
-    aspect-ratio: 1.5;
+    flex-wrap: wrap;
+    height: 100vh;
 }
 
 #menu-drawPage {
     display: flex;
     flex-direction: column;
-    align-content: space-evenly;
-    align-items: center;
-    justify-content:space-evenly;
-    
+    gap: 20px;
 }
 
-#gridButton {
+.conteinerSeletorDeCores {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 9px;
+    height: 100%;
+}
+
+.coresPreSelecionadas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3px;
+}
+
+.coresPreSelecionadas div {
+    aspect-ratio: 1;
+}
+
+.corSelecionada {
+    border: 2px solid;
+}
+
+.gridButton {
     background-color: rgb(40, 13, 46);
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: 'VT323', monospace;
     cursor: pointer;
-    float: left;
     transition: background 1s;
 }
 
-#gridButton:hover {
+.gridButton:hover {
     background-color: rgb(231, 89, 89);
 }
 
-#cor {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+input[type="color"] {
+    height: fit-content;
+	border: none;
+    background-attachment: transparent;
+    width: 100%;
 }
 
-input[type="color"] {
-	/*-webkit-appearance: none;*/
-    background-color: white;
-	border: none;
-	width: 32px;
-	height: 32px;
-}
 input[type="color"]::-webkit-color-swatch-wrapper {
 	padding: 0;
-    border-radius: 50%;
 }
+
 input[type="color"]::-webkit-color-swatch {
+    height: 40px;
 	border: none;
-    border-radius: 50%;
 }
