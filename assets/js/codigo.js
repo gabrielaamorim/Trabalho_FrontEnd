@@ -4,11 +4,12 @@ Brenda Gobira Valença - 2020025038
 Gabriela Emanuele de Araújo Amorim - 2020011260
 */ 
 
-var tam = 225;
+var tam = 1600;
 var isShowingBorder = true;
 var color = "rgb(255, 255, 255)";
 var quadro = document.querySelector(".areaTrabalho");
 var conteinerCoresPreSelecionadas = document.getElementById("coresPreSelecionadas");
+var isClicking = false;
 
 //Criação da área do pixel art
 for (let i = 0; i < tam; i++) {
@@ -36,20 +37,34 @@ for(let item of coresPreSelecionadas) {
     });
 }
 
+quadro.addEventListener('mousedown', () => {
+    isClicking = true;
+});
+
+quadro.addEventListener('mouseup', () => {
+    isClicking = false;
+});
+
 //Lógica para pintura dos quadros 
 var quadrantes = quadro.children;
-var backgroundColor = "rgb(241, 236, 236)";
+var backgroundColor = "rgba(241, 236, 236, 0.9)";
 for (let item of quadrantes) {
     item.addEventListener("click", () => {
-        console.log(item.style.backgroundColor, color);
-        console.log(item.style.backgroundColor, color);
-        if (item.style.backgroundColor != color) {
+        if (!isClicking) {
+            if (item.style.backgroundColor != color) {
+                item.style.backgroundColor = color;
+            }
+            else {
+                item.style.backgroundColor = backgroundColor;
+            }
+        }
+    });
+
+    item.addEventListener('mouseenter', () => {
+        if (isClicking) {
             item.style.backgroundColor = color;
         }
-        else {
-            item.style.backgroundColor = backgroundColor;
-        }
-    })
+    });
 }
 
 // Função para converter código hex em rbg 
